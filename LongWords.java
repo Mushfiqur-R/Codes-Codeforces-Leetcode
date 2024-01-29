@@ -1,24 +1,23 @@
-import java.util.*;
+import java.util.Scanner;
 public class LongWords
 {
     public static void main(String[] args) {
-        System.out.println("Enter the word:");
+       // System.out.println("Enter the word:");
         Scanner input=new Scanner(System.in);
-        String word=input.nextLine();
-        int count=word.length();
+        int n=input.nextInt();
         
-            if(word.length()>10)
+        while(n-->0)
+        {
+            String word=input.next();
+            int count=word.length();
+            if(count>10)
             {
-                char first=word.charAt(0);
-                char last=word.charAt(word.length()-1);
-               
-                   System.out.print(first+Integer.toString(count-2)+last);
-                
-                
-            }
+                   System.out.print(""+word.charAt(0)+(count-2)+word.charAt(count-1));
+                }
             else{
                 System.out.println(word);
             }
-            input.close();
+         
         }
+    }
     }
